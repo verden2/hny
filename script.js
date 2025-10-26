@@ -1,10 +1,10 @@
-const NUM_SNOWFLAKES = 50; // Количество снежинок
+const NUM_SNOWFLAKES = 50; 
 
     function createSnowflake() {
       const snowflake = document.createElement("div");
-      const size = Math.random() * 5 + 5; // Размер снежинки
-      const duration = Math.random() * 5 + 5; // Продолжительность падения
-      const startX = Math.random() * 100; // Начальная позиция
+      const size = Math.random() * 5 + 5;
+      const duration = Math.random() * 5 + 5; 
+      const startX = Math.random() * 100;
 
       snowflake.classList.add("snowflake");
       snowflake.style.width = `${size}px`;
@@ -15,17 +15,15 @@ const NUM_SNOWFLAKES = 50; // Количество снежинок
       snowflake.style.backgroundColor = "white";
 
       document.body.appendChild(snowflake);
-
-      // Удаляем снежинку после завершения анимации
+        
       setTimeout(() => {
         snowflake.remove();
       }, duration * 1000);
     }
 
-    // Создаем снежинки каждые 300 мс
     setInterval(createSnowflake, 300);
 
-    // Заполняем страницу снежинками
     for (let i = 0; i < NUM_SNOWFLAKES; i++) {
       createSnowflake();
     }
+
